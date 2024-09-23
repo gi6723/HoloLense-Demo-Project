@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>MQTTnet.Extensions.ManagedClient</id>
+    <version>4.3.7.1207</version>
+    <authors>The contributors of MQTTnet</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <icon>nuget.png</icon>
+    <projectUrl>https://github.com/dotnet/MQTTnet</projectUrl>
+    <description>This is an extension library which provides a managed MQTT client with additional features using MQTTnet.</description>
+    <releaseNotes>For release notes please go to MQTTnet release notes (https://www.nuget.org/packages/MQTTnet/).</releaseNotes>
+    <copyright>Copyright (c) .NET Foundation and Contributors</copyright>
+    <tags>MQTT Message Queue Telemetry Transport MQTTClient MQTTServer Server MQTTBroker Broker NETStandard IoT InternetOfThings Messaging Hardware Arduino Sensor Actuator M2M ESP Smart Home Cities Automation Xamarin Blazor</tags>
+    <repository type="git" url="https://github.com/dotnet/MQTTnet.git" commit="740d605fd2c25922fad6ea60e78e8370356e95dd" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.5.2">
+        <dependency id="MQTTnet" version="4.3.7.1207" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETFramework4.6.1">
+        <dependency id="MQTTnet" version="4.3.7.1207" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETFramework4.8">
+        <dependency id="MQTTnet" version="4.3.7.1207" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard1.3">
+        <dependency id="MQTTnet" version="4.3.7.1207" exclude="Build,Analyzers" />
+        <dependency id="NETStandard.Library" version="1.6.1" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="UAP10.0.10240">
+        <dependency id="MQTTnet" version="4.3.7.1207" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETCoreApp3.1">
+        <dependency id="MQTTnet" version="4.3.7.1207" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net5.0">
+        <dependency id="MQTTnet" version="4.3.7.1207" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net6.0">
+        <dependency id="MQTTnet" version="4.3.7.1207" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net7.0">
+        <dependency id="MQTTnet" version="4.3.7.1207" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="MQTTnet" version="4.3.7.1207" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.1">
+        <dependency id="MQTTnet" version="4.3.7.1207" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>
