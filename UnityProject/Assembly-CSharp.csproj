@@ -12,7 +12,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{94a69549-9628-bdde-fb85-e4536068804c}</ProjectGuid>
+    <ProjectGuid>{2106585b-b409-cb68-b5f4-5b9dd210a60f}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -42,6 +42,16 @@
   </PropertyGroup>
   <ItemGroup>
      <Folder Include="Assets" />
+     <Folder Include="Assets\XR\Resources" />
+     <Folder Include="Assets\XRI\Settings" />
+     <Folder Include="Assets\XR\Loaders" />
+     <Folder Include="Assets\XR\Settings" />
+     <Folder Include="Assets\XR" />
+     <Folder Include="Assets\MRTK.Generated" />
+     <Folder Include="Assets\XRI" />
+     <Folder Include="Assets\XR\UserSimulationSettings\Resources" />
+     <Folder Include="Assets\XRI\Settings\Resources" />
+     <Folder Include="Assets\XR\UserSimulationSettings" />
      <Folder Include="Assets\Scenes" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.21f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
