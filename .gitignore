@@ -1,0 +1,8 @@
+# Unity generated files
+Temp/
+Library/
+Logs/
+obj/
+.vs/
+Build/
+.idea/
