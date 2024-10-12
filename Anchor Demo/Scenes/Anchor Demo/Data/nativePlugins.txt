@@ -1,0 +1,10 @@
+RemoteRenderingClient.dll
+ObjectTrackerRefinement.dll
+ObjectTrackerDiagnostics.dll
+Microsoft.Azure.ObjectAnchors.dll
+ObjectTrackerApi.dll
+ObjectTrackerFusion.dll
+openxr_loader.dll
+UnityOpenXRHands.dll
+VolumeFusionAPI.dll
+Microsoft.Holographic.HybridRemoting.dll
