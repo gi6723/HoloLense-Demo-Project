@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Assets\EyeData.cs" />
     <Compile Include="Assets\MRTK.Generated\DefaultCompanyNewSubsystem\NewSubsystem.cs" />
+    <Compile Include="Assets\SpawnAnchorFromRaySelect.cs" />
     <Compile Include="Assets\MRTK.Generated\DefaultCompanyNewSubsystem\NewSubsystemDescriptor.cs" />
     <Compile Include="Assets\MRTK.Generated\DefaultCompanyNewSubsystem\DefaultCompanyNewSubsystem.cs" />
     <Compile Include="Assets\CursorPosition.cs" />
@@ -945,6 +946,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.ARStarterAssets.csproj">
+      <Project>{142e2f9a-a4d1-3e87-3625-263b89b6bf59}</Project>
+      <Name>Unity.XR.Interaction.Toolkit.Samples.ARStarterAssets</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.ARStarterAssets.Editor.csproj">
+      <Project>{19224fd6-d596-1fe7-0d2b-d678214a4d72}</Project>
+      <Name>Unity.XR.Interaction.Toolkit.Samples.ARStarterAssets.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor.csproj">
+      <Project>{e63e9748-da87-b9a1-5e15-b7ca55fe69cb}</Project>
+      <Name>Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.StarterAssets.csproj">
+      <Project>{93929a0a-bd01-4333-df12-dd429865e7af}</Project>
+      <Name>Unity.XR.Interaction.Toolkit.Samples.StarterAssets</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
