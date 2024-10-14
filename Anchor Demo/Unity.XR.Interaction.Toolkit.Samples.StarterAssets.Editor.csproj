@@ -335,6 +335,9 @@
     <Reference Include="Unity.VisualScripting.TextureAssets">
       <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
     </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Assets\MRTK.Tutorials.AzureSpatialAnchors\Plugins\RestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
     </Reference>

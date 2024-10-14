@@ -34,7 +34,7 @@ public class CursorPosition : MonoBehaviour
         {
             Vector3 gazeDirection = _gazeInteractor.rayEndPoint;
             _cursorInstance.transform.position = gazeDirection;
-            Debug.Log($"Gaze Endpoint maybe: {gazeDirection}, Normalized: {gazeDirection.normalized}");
+            //Debug.Log($"Gaze Endpoint maybe: {gazeDirection}, Normalized: {gazeDirection.normalized}");
         }
     }
 }

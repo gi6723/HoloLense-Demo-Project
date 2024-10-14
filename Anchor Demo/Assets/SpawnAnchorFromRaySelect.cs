@@ -1,10 +1,12 @@
 using System.Linq;
+using MixedReality.Toolkit;
 using MixedReality.Toolkit.Input;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using UnityEngine.XR.Hands;
-using UnityEngine.XR.Hands.Processing; // Requires XR Hands package
+using UnityEngine.XR.Hands.Processing;
+using UnityEngine.XR.Interaction.Toolkit; // Requires XR Hands package
 using UnityEngine.XR.Management;
 
 public class PinchToPlaceAnchorXR : MonoBehaviour
@@ -17,7 +19,7 @@ public class PinchToPlaceAnchorXR : MonoBehaviour
     private PokeInteractor leftHandPoke;
     void Start()
     {
-        // Get the XR Hands Subsystem
+        // Get poke interactors from each hand controller
         var pokes = FindObjectsOfType<PokeInteractor>();
         
         if (pokes == null)
@@ -26,24 +28,24 @@ public class PinchToPlaceAnchorXR : MonoBehaviour
         }
         else
         {
+            //should find both hands and their pokes, add a listener to each one at runtime that lets them add an anchor upon poke.
             Debug.Log($"{pokes.Length} pokes.");
             rightHandPoke = pokes[0];
             leftHandPoke = pokes[1];
+            rightHandPoke.selectEntered.AddListener(PlaceAnchor);
+            leftHandPoke.selectEntered.AddListener(PlaceAnchor);
         }
         
     }
 
-    void Update()
+    void PlaceAnchor(BaseInteractionEventArgs args)
     {
-        //determine whether a selection has been made.
-        var place = rightHandPoke.isSelectActive;
-        // Raycast to detect planes
-
-        if (place)
-        {
-            Debug.Log($"{rightHandPoke.PokeTrajectory.End} is selected.");
-        }
+        var poke = rightHandPoke.PokeTrajectory;
+        
+        Debug.Log($"Bro poked from {poke.Start} to {poke.End} for a distance of {Vector3.Distance(poke.Start, poke.End)}");
     }
+
+
 /*
     // Detect pinch by checking the distance between thumb and index finger joints
 
