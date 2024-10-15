@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>WatsonWebsocket</id>
+    <version>4.1.2</version>
+    <title>WatsonWebsocket</title>
+    <authors>Joel Christner</authors>
+    <license type="file">LICENSE.md</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <icon>watson.png</icon>
+    <readme>README.md</readme>
+    <projectUrl>https://github.com/jchristn/WatsonWebsocket</projectUrl>
+    <description>WatsonWebsocket is the EASIEST and FASTEST way to build client and server applications that rely on messaging using websockets.  It's.  Really.  Easy.</description>
+    <releaseNotes>Retarget to include net8.0.</releaseNotes>
+    <copyright>(c)2024 Joel Christner</copyright>
+    <tags>websocket message messaging frame framing web socket rpc api</tags>
+    <repository type="Github" url="https://github.com/jchristn/WatsonWebsocket" commit="06df00dfe6dafa2917a4d7b9156fdbe33c2bada7" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.6.2" />
+      <group targetFramework=".NETFramework4.8" />
+      <group targetFramework="net6.0" />
+      <group targetFramework="net7.0" />
+      <group targetFramework="net8.0" />
+    </dependencies>
+  </metadata>
+</package>
