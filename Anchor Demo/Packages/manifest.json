@@ -1,7 +1,10 @@
 {
   "dependencies": {
+    "com.github-glitchenzo.nugetforunity": "https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity",
     "com.microsoft.azure.object-anchors.runtime": "file:MixedReality/com.microsoft.azure.object-anchors.runtime-0.25.0.tgz",
     "com.microsoft.azure.remote-rendering": "file:MixedReality/com.microsoft.azure.remote-rendering-1.2.32.tgz",
+    "com.microsoft.azure.spatial-anchors-sdk.core": "file:MixedReality/com.microsoft.azure.spatial-anchors-sdk.core-2.14.1.tgz",
+    "com.microsoft.azure.spatial-anchors-sdk.windows": "file:MixedReality/com.microsoft.azure.spatial-anchors-sdk.windows-2.14.1.tgz",
     "com.microsoft.mixedreality.openxr": "file:MixedReality/com.microsoft.mixedreality.openxr-1.11.1.tgz",
     "com.microsoft.mrtk.graphicstools.unity": "file:MixedReality/com.microsoft.mrtk.graphicstools.unity-0.7.1.tgz",
     "com.microsoft.mrtk.tts.windows": "file:MixedReality/com.microsoft.mrtk.tts.windows-1.0.4.tgz",
@@ -57,8 +60,6 @@
     "com.unity.modules.video": "1.0.0",
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
-    "com.unity.modules.xr": "1.0.0",
-    "com.microsoft.azure.spatial-anchors-sdk.core": "file:MixedReality/com.microsoft.azure.spatial-anchors-sdk.core-2.14.1.tgz",
-    "com.microsoft.azure.spatial-anchors-sdk.windows": "file:MixedReality/com.microsoft.azure.spatial-anchors-sdk.windows-2.14.1.tgz"
+    "com.unity.modules.xr": "1.0.0"
   }
 }

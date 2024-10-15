@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit.Inputs.Readers;
@@ -24,6 +26,7 @@ public class GazeDataManager : MonoBehaviour
     
     private Dictionary<string, InputAction> _eyeVectorActions;
     private Dictionary<string, InputAction> _eyeRotationActions;
+    
     
     
 
@@ -80,11 +83,12 @@ public class GazeDataManager : MonoBehaviour
         //Modified head position adjustment for debug log readability and easier testing. Implemented in a way such that head position will not change unless the
         var currentPos = _cam.transform.position;
         _headDir = _cam.transform.forward;
-        if(ChangePosition(currentPos))
-            PrintHeadData();
+        if (ChangePosition(currentPos)) ;
+            //PrintHeadData();
         
         var currentData = new EyeData(Time.time, _eyeVectorActions, _eyeRotationActions);
-        Debug.Log(currentData.ToJson());
+        
+        //Debug.Log(currentData.ToJson());
         
        
     }

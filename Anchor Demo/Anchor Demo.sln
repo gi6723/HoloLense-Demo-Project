@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.XR.Interaction.Toolki
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.XR.Interaction.Toolkit.Samples.ARStarterAssets.Editor", "Unity.XR.Interaction.Toolkit.Samples.ARStarterAssets.Editor.csproj", "{19224fd6-d596-1fe7-0d2b-d678214a4d72}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.MixedReality.QR.Editor", "Microsoft.MixedReality.QR.Editor.csproj", "{ad08befc-39d4-2e43-46da-b80564f8d48a}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.VCRTForwarders.140", "Microsoft.VCRTForwarders.140.csproj", "{43b57c54-417f-3ddf-ea4f-073159af21db}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor", "Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor.csproj", "{e63e9748-da87-b9a1-5e15-b7ca55fe69cb}"
 EndProject
 Global
@@ -24,6 +28,10 @@ Global
 		{142e2f9a-a4d1-3e87-3625-263b89b6bf59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19224fd6-d596-1fe7-0d2b-d678214a4d72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{19224fd6-d596-1fe7-0d2b-d678214a4d72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ad08befc-39d4-2e43-46da-b80564f8d48a}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ad08befc-39d4-2e43-46da-b80564f8d48a}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43b57c54-417f-3ddf-ea4f-073159af21db}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43b57c54-417f-3ddf-ea4f-073159af21db}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{e63e9748-da87-b9a1-5e15-b7ca55fe69cb}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{e63e9748-da87-b9a1-5e15-b7ca55fe69cb}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
