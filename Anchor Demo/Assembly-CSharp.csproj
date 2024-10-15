@@ -45,13 +45,88 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.46f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
+    <Compile Include="Assets\MRTK.Tutorials.GettingStarted\Scripts\PartAssemblyDemo.cs" />
     <Compile Include="Assets\EyeData.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\MRTK.Generated\DefaultCompanyNewSubsystem\NewSubsystem.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+    <Compile Include="Assets\MRTK.Tutorials.GettingStarted\Scripts\DirectionalIndicatorController.cs" />
+    <Compile Include="Assets\SpawnAnchorFromRaySelect.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
+    <Compile Include="Assets\MRTK.Tutorials.GettingStarted\Scripts\TogglePlacementHints.cs" />
+    <Compile Include="Assets\MRTK.Tutorials.AzureSpatialAnchors\Scripts\AnchorModuleScript.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
+    <Compile Include="Assets\MRTK.Tutorials.AzureSpatialAnchors\Scripts\DebugWindow.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+    <Compile Include="Assets\SpatialAnchors.cs" />
+    <Compile Include="Assets\MRTK.Tutorials.GettingStarted\Scripts\ExplodeViewController.cs" />
+    <Compile Include="Assets\MRTK.Tutorials.AzureSpatialAnchors\Scripts\DisableDiagnosticsSystem.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
+    <Compile Include="Assets\MRTK.Tutorials.GettingStarted\Scripts\PlacementHintsController.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
     <Compile Include="Assets\MRTK.Generated\DefaultCompanyNewSubsystem\NewSubsystemDescriptor.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
+    <Compile Include="Assets\MRTK.Tutorials.AzureSpatialAnchors\Scripts\AnchorFeedbackScript.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
     <Compile Include="Assets\MRTK.Generated\DefaultCompanyNewSubsystem\DefaultCompanyNewSubsystem.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
+    <Compile Include="Assets\MRTK.Tutorials.GettingStarted\Scripts\LaunchLunarModule.cs" />
+    <Compile Include="Assets\MRTK.Tutorials.GettingStarted\Scripts\PartAssemblyController.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\CursorPosition.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\MRTK.Generated\DefaultCompanyNewSubsystem\INewSubsystem.cs" />
     <Compile Include="Assets\GazeDataManager.cs" />
+    <Compile Include="Assets\MRTK.Tutorials.GettingStarted\Scripts\EyeTrackingTutorialDemo.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\MRTK.Tutorials.AzureSpatialAnchors\Version.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\MRTK.Tutorials.GettingStarted\Version.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.46f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -296,10 +371,13 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.46f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="ReportGeneratorMerged">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\PackageCache\com.unity.testtools.codecoverage@1.2.6\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\PackageCache\com.unity.testtools.codecoverage@1.2.6\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\PackageCache\com.unity.visualscripting@1.9.4\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\PackageCache\com.unity.visualscripting@1.9.4\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Assets\MRTK.Tutorials.AzureSpatialAnchors\Plugins\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.46f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -668,265 +746,314 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.46f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.OpenXR.Features.MetaQuestSupport.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.XR.OpenXR.Features.MetaQuestSupport.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.Management">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.XR.Management.dll</HintPath>
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.XR.OpenXR.Features.MetaQuestSupport.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.Interaction.Toolkit.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.XR.Interaction.Toolkit.Editor.dll</HintPath>
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.XR.Interaction.Toolkit.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.ARSubsystemsDeprecated.Editor">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.XR.ARSubsystemsDeprecated.Editor.dll</HintPath>
     </Reference>
     <Reference Include="MixedReality.Toolkit.Core.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.Core.Editor.dll</HintPath>
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.Core.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.Hands">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.XR.Hands.dll</HintPath>
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.XR.Hands.dll</HintPath>
     </Reference>
     <Reference Include="MixedReality.Toolkit.Diagnostics">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.Diagnostics.dll</HintPath>
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.Diagnostics.dll</HintPath>
     </Reference>
     <Reference Include="MixedReality.Toolkit.SpatialManipulation">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.SpatialManipulation.dll</HintPath>
-    </Reference>
-    <Reference Include="MixedReality.Toolkit.UXComponents.NonCanvas">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.UXComponents.NonCanvas.dll</HintPath>
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.SpatialManipulation.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.ARFoundation.VisualScripting.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.XR.ARFoundation.VisualScripting.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.OpenXR.Features.ConformanceAutomation">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.XR.OpenXR.Features.ConformanceAutomation.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.ARSubsystems.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.XR.ARSubsystems.Editor.dll</HintPath>
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.XR.ARFoundation.VisualScripting.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.OpenXR.Features.OculusQuestSupport.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.XR.OpenXR.Features.OculusQuestSupport.Editor.dll</HintPath>
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.XR.OpenXR.Features.OculusQuestSupport.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.MixedReality.GraphicsTools">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Microsoft.MixedReality.GraphicsTools.dll</HintPath>
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Microsoft.MixedReality.GraphicsTools.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Flow">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.ARAnalytics.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.XR.ARAnalytics.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.CoreUtils">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.XR.CoreUtils.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.Simulation">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.XR.Simulation.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.OpenXR">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.XR.OpenXR.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.ARSubsystems">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.XR.ARSubsystems.dll</HintPath>
-    </Reference>
-    <Reference Include="MixedReality.Toolkit.UXCore.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.UXCore.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.OpenXR.Features.MetaQuestSupport">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.XR.OpenXR.Features.MetaQuestSupport.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TestTools.CodeCoverage.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+    <Reference Include="Unity.RenderPipelines.Core.Editor">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.MixedReality.Toolkit.TextToSpeech.Windows">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Microsoft.MixedReality.Toolkit.TextToSpeech.Windows.dll</HintPath>
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Microsoft.MixedReality.Toolkit.TextToSpeech.Windows.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.XR.Management.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.XR.Management.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="MixedReality.Toolkit.Speech.Windows">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.Speech.Windows.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.ARFoundation.VisualScripting">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.XR.ARFoundation.VisualScripting.dll</HintPath>
+    <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.ARFoundation.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.XR.ARFoundation.Editor.dll</HintPath>
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.XR.ARFoundation.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.Simulation">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.XR.Simulation.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.OpenXR">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.XR.OpenXR.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.ARSubsystems">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.XR.ARSubsystems.dll</HintPath>
+    </Reference>
+    <Reference Include="MixedReality.Toolkit.Speech.Windows">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.Speech.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.OpenXR.Features.MetaQuestSupport">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.XR.OpenXR.Features.MetaQuestSupport.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TestTools.CodeCoverage.Editor">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.MixedReality.OpenXR">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Microsoft.MixedReality.OpenXR.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.CoreUtils.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.XR.CoreUtils.Editor.dll</HintPath>
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Microsoft.MixedReality.OpenXR.dll</HintPath>
     </Reference>
     <Reference Include="MixedReality.Toolkit.Tools">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.Tools.dll</HintPath>
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.Tools.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ObjectAnchors.Runtime.Api">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Microsoft.ObjectAnchors.Runtime.Api.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.Simulation.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.XR.Simulation.Editor.dll</HintPath>
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.OpenXR.Features.OculusQuestSupport">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.XR.OpenXR.Features.OculusQuestSupport.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.Interaction.Toolkit">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.XR.Interaction.Toolkit.dll</HintPath>
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Azure.RemoteRendering.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Microsoft.Azure.RemoteRendering.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Azure.RemoteRendering">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Microsoft.Azure.RemoteRendering.dll</HintPath>
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Microsoft.Azure.RemoteRendering.Editor.dll</HintPath>
     </Reference>
     <Reference Include="MixedReality.Toolkit.UXCore">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.UXCore.dll</HintPath>
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.UXCore.dll</HintPath>
     </Reference>
     <Reference Include="MixedReality.Toolkit.Core">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.EditorCoroutines.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="MixedReality.Toolkit.Accessibility">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.Accessibility.dll</HintPath>
-    </Reference>
-    <Reference Include="MixedReality.Toolkit.Audio">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.Audio.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.ARFoundation">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.XR.ARFoundation.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.XR.LegacyInputHelpers">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.PlasticSCM.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.Core.dll</HintPath>
     </Reference>
     <Reference Include="MixedReality.Toolkit.UXComponents">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.UXComponents.dll</HintPath>
-    </Reference>
-    <Reference Include="MixedReality.Toolkit.Input">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.Input.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.UXComponents.dll</HintPath>
     </Reference>
     <Reference Include="MixedReality.Toolkit.Input.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.Input.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Shared.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.SpatialTracking">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll</HintPath>
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.Input.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Core">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.SpatialTracking">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Core.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.Hands.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.XR.Hands.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.XR.LegacyInputHelpers">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
-    </Reference>
-    <Reference Include="MixedReality.Toolkit.UXComponents.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.UXComponents.Editor.dll</HintPath>
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="MixedReality.Toolkit.Diagnostics.Visualization">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.Diagnostics.Visualization.dll</HintPath>
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.Diagnostics.Visualization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.MixedReality.OpenXR.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Microsoft.MixedReality.OpenXR.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.InputSystem">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Microsoft.MixedReality.OpenXR.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InputSystem.ForUI">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.InputSystem.ForUI.dll</HintPath>
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.InputSystem.ForUI.dll</HintPath>
     </Reference>
     <Reference Include="MixedReality.Toolkit.SpatialManipulation.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.SpatialManipulation.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.OpenXR.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.XR.OpenXR.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.SpatialManipulation.Editor.dll</HintPath>
     </Reference>
     <Reference Include="MixedReality.Toolkit.Accessibility.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.Accessibility.Editor.dll</HintPath>
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.Accessibility.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ObjectAnchors.Runtime.Core">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Microsoft.ObjectAnchors.Runtime.Core.dll</HintPath>
+    <Reference Include="Unity.Subsystem.Registration">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.Subsystem.Registration.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.State.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.ARFoundation.InternalUtils">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.XR.ARFoundation.InternalUtils.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Mathematics">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+    <Reference Include="Unity.Searcher.Editor">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ObjectAnchors.Initializer.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Microsoft.ObjectAnchors.Initializer.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.OpenXR.Features.RuntimeDebugger.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.XR.OpenXR.Features.RuntimeDebugger.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.MixedReality.GraphicsTools.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Microsoft.MixedReality.GraphicsTools.Editor.dll</HintPath>
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Microsoft.ObjectAnchors.Initializer.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
     </Reference>
     <Reference Include="MixedReality.Toolkit.Speech.Windows.Editor">
-      <HintPath>C:\Users\zachr\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.Speech.Windows.Editor.dll</HintPath>
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.Speech.Windows.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.Management">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.XR.Management.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="MixedReality.Toolkit.UXComponents.NonCanvas">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.UXComponents.NonCanvas.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Rider.Editor">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.OpenXR.Features.ConformanceAutomation">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.XR.OpenXR.Features.ConformanceAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.ARSubsystems.Editor">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.XR.ARSubsystems.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Flow">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics.Editor">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.ARAnalytics.Editor">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.XR.ARAnalytics.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.CoreUtils">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.XR.CoreUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="MixedReality.Toolkit.UXCore.Editor">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.UXCore.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.ARFoundation.VisualScripting">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.XR.ARFoundation.VisualScripting.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.Management.Editor">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.XR.Management.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.CoreUtils.Editor">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.XR.CoreUtils.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ObjectAnchors.Runtime.Api">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Microsoft.ObjectAnchors.Runtime.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.Simulation.Editor">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.XR.Simulation.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="AzureSpatialAnchors.SDK.Core.Editor">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\AzureSpatialAnchors.SDK.Core.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.OpenXR.Features.OculusQuestSupport">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.XR.OpenXR.Features.OculusQuestSupport.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.Interaction.Toolkit">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.XR.Interaction.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.RemoteRendering">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Microsoft.Azure.RemoteRendering.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.EditorCoroutines.Editor">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="MixedReality.Toolkit.Accessibility">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.Accessibility.dll</HintPath>
+    </Reference>
+    <Reference Include="MixedReality.Toolkit.Audio">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.Audio.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.ARFoundation">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.XR.ARFoundation.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XR.LegacyInputHelpers">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PlasticSCM.Editor">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="MixedReality.Toolkit.Input">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline.Editor">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Shared.Editor">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ShaderGraph.Editor">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.SpatialTracking">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Core">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Core.Editor">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.Hands.Editor">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.XR.Hands.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.XR.LegacyInputHelpers">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="MixedReality.Toolkit.UXComponents.Editor">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\MixedReality.Toolkit.UXComponents.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InputSystem">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="AzureSpatialAnchors.SDK.Core.Runtime">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\AzureSpatialAnchors.SDK.Core.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="AzureSpatialAnchors.SDK.Windows.Runtime">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\AzureSpatialAnchors.SDK.Windows.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.OpenXR.Editor">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.XR.OpenXR.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ObjectAnchors.Runtime.Core">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Microsoft.ObjectAnchors.Runtime.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.State.Editor">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.ARFoundation.InternalUtils">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.XR.ARFoundation.InternalUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.OpenXR.Features.RuntimeDebugger.Editor">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.XR.OpenXR.Features.RuntimeDebugger.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.MixedReality.GraphicsTools.Editor">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Microsoft.MixedReality.GraphicsTools.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.ARStarterAssets.csproj">
+      <Project>{142e2f9a-a4d1-3e87-3625-263b89b6bf59}</Project>
+      <Name>Unity.XR.Interaction.Toolkit.Samples.ARStarterAssets</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.ARStarterAssets.Editor.csproj">
+      <Project>{19224fd6-d596-1fe7-0d2b-d678214a4d72}</Project>
+      <Name>Unity.XR.Interaction.Toolkit.Samples.ARStarterAssets.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor.csproj">
+      <Project>{e63e9748-da87-b9a1-5e15-b7ca55fe69cb}</Project>
+      <Name>Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.StarterAssets.csproj">
+      <Project>{93929a0a-bd01-4333-df12-dd429865e7af}</Project>
+      <Name>Unity.XR.Interaction.Toolkit.Samples.StarterAssets</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

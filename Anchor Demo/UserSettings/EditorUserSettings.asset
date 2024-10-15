@@ -5,6 +5,9 @@ EditorUserSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 4
   m_ConfigSettings:
+    HideARSubsystemsDeprecatedWarning:
+      value: 17434103
+      flags: 0
     RecentlyUsedSceneGuid-0:
       value: 530104565505590b5d5e5c7240730f404647487a7c7876607d794d63b2b06468
       flags: 0

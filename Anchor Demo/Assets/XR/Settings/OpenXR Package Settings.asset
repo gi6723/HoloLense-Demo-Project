@@ -1162,7 +1162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34219f5077d851f448f60c5f0c3568ee, type: 3}
   m_Name: AzureRemoteRenderingFeature Metro
   m_EditorClassIdentifier: 
-  m_enabled: 0
+  m_enabled: 1
   nameUi: Azure Remote Rendering
   version: 0.0.1
   featureIdInternal: com.microsoft.azure.remote-rendering.feature.remote-rendering
