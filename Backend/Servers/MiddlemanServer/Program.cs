@@ -33,11 +33,6 @@ class Program
         Console.ReadLine();  // Keep the server running
     }
 
-    static void ClientConnected(object sender, ClientConnectedEventArgs args)
-    {
-        Console.WriteLine($"Client connected: {args.IpPort}");
-    }
-
     static void ForwardToMainServer(byte[] data)
     {
         string message = System.Text.Encoding.UTF8.GetString(data);
@@ -54,4 +49,5 @@ class Program
         }
     }
 }
+
 
