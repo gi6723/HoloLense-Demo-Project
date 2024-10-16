@@ -3,7 +3,7 @@ using System;
 
 class Program
 {
-    static WatsonWsServer wsServer;
+    static WatsonWsServer wsServer = null!;
 
     static void Main(string[] args)
     {
@@ -12,23 +12,18 @@ class Program
 
         // Start the WebSocket server
         wsServer = new WatsonWsServer(serverIp, serverPort, false);
-        wsServer.ClientConnected += ClientConnected;
-        wsServer.MessageReceived += MessageReceived;
+        wsServer.ClientConnected += (sender, args) => {
+            Console.WriteLine($"Client connected: {args.Client.IpPort}");
+        };
+        wsServer.MessageReceived += (sender, args) => {
+            string receivedData = System.Text.Encoding.UTF8.GetString(args.Data);
+            Console.WriteLine($"Data received from Middleman: {receivedData}");
+        };
         wsServer.Start();
 
         Console.WriteLine($"Main WebSocket server started on {serverIp}:{serverPort}");
         Console.ReadLine();  // Keep the server running
     }
-
-    static void ClientConnected(object sender, ClientConnectedEventArgs args)
-    {
-        Console.WriteLine($"Client connected: {args.IpPort}");
-    }
-
-    static void MessageReceived(object sender, MessageReceivedEventArgs args)
-    {
-        string receivedData = System.Text.Encoding.UTF8.GetString(args.Data);
-        Console.WriteLine($"Data received from Middleman: {receivedData}");
-    }
 }
+
 
