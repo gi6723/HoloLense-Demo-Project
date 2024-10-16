@@ -12,7 +12,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{19224fd6-d596-1fe7-0d2b-d678214a4d72}</ProjectGuid>
+    <ProjectGuid>{61582123-96a1-b8ce-ffd2-4dd15828758c}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -312,49 +312,49 @@
       <HintPath>D:\Unity\2022.3.46f1\Editor\Data\PlaybackEngines\MetroSupport\UnityEditor.UWP.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.YamlDotNet">
-      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Anchor Demo\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
+      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Unity Project\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
     </Reference>
     <Reference Include="RestSharp">
-      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Anchor Demo\Assets\MRTK.Tutorials.AzureSpatialAnchors\Plugins\RestSharp.dll</HintPath>
+      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Unity Project\Assets\MRTK.Tutorials.AzureSpatialAnchors\Plugins\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="ReportGeneratorMerged">
-      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Anchor Demo\Library\PackageCache\com.unity.testtools.codecoverage@1.2.6\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Unity Project\Library\PackageCache\com.unity.testtools.codecoverage@1.2.6\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
     </Reference>
     <Reference Include="unityplastic">
-      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Anchor Demo\Library\PackageCache\com.unity.collab-proxy@2.5.1\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Unity Project\Library\PackageCache\com.unity.collab-proxy@2.5.1\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
-      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Anchor Demo\Library\PackageCache\com.unity.collab-proxy@2.5.1\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Unity Project\Library\PackageCache\com.unity.collab-proxy@2.5.1\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.MixedReality.EyeTracking.DotNet">
-      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Anchor Demo\Assets\Packages\Microsoft.MixedReality.EyeTracking.1.0.2\lib\unity\netstandard2.0\Microsoft.MixedReality.EyeTracking.DotNet.dll</HintPath>
+      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Unity Project\Assets\Packages\Microsoft.MixedReality.EyeTracking.1.0.2\lib\unity\netstandard2.0\Microsoft.MixedReality.EyeTracking.DotNet.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
-      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Anchor Demo\Library\PackageCache\com.unity.collab-proxy@2.5.1\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Unity Project\Library\PackageCache\com.unity.collab-proxy@2.5.1\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="log4netPlastic">
-      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Anchor Demo\Library\PackageCache\com.unity.collab-proxy@2.5.1\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Unity Project\Library\PackageCache\com.unity.collab-proxy@2.5.1\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.IonicZip">
-      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Anchor Demo\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
+      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Unity Project\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Anchor Demo\Library\PackageCache\com.unity.visualscripting@1.9.4\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Unity Project\Library\PackageCache\com.unity.visualscripting@1.9.4\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="NuGetForUnity.PluginAPI">
-      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Anchor Demo\Assets\NuGet\Editor\NuGetForUnity.PluginAPI.dll</HintPath>
+      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Unity Project\Assets\NuGet\Editor\NuGetForUnity.PluginAPI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.TextureAssets">
-      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Anchor Demo\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
+      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Unity Project\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
     </Reference>
     <Reference Include="NugetForUnity">
-      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Anchor Demo\Assets\NuGet\Editor\NugetForUnity.dll</HintPath>
+      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Unity Project\Assets\NuGet\Editor\NugetForUnity.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Anchor Demo\Assets\Packages\Newtonsoft.Json.13.0.3\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Unity Project\Assets\Packages\Newtonsoft.Json.13.0.3\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Anchor Demo\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
+      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Unity Project\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>D:\Unity\2022.3.46f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\mscorlib.dll</HintPath>
@@ -731,26 +731,30 @@
     <Reference Include="System.Xml.XPath.XDocument">
       <HintPath>D:\Unity\2022.3.46f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.XPath.XDocument.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.XR.CoreUtils">
-      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.XR.CoreUtils.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.CoreUtils.Editor">
-      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\Unity.XR.CoreUtils.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Unity Project\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.TestRunner">
-      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\UnityEditor.TestRunner.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.TestRunner">
-      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Anchor Demo\Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
+      <HintPath>D:\HoloLense-Demo-Project\HoloLense-Demo-Project\Unity Project\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Unity.XR.CoreUtils.csproj">
+      <Project>{ffff3ddf-a1aa-68cc-9c4c-db050033030a}</Project>
+      <Name>Unity.XR.CoreUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.CoreUtils.Editor.csproj">
+      <Project>{8bdf5939-d955-a1b5-0bfa-8ba25caecd4c}</Project>
+      <Name>Unity.XR.CoreUtils.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.TestRunner.csproj">
+      <Project>{37dc06a8-aaf6-9681-9408-0c79ba01bed0}</Project>
+      <Name>UnityEditor.TestRunner</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.TestRunner.csproj">
+      <Project>{588ea2be-e67d-2ab0-e1ad-10efbddef8b7}</Project>
+      <Name>UnityEngine.TestRunner</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
