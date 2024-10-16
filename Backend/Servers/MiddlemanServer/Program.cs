@@ -1,12 +1,13 @@
 ﻿using WatsonWebsocket;
 using System;
+using System.Threading.Tasks;
 
 class Program
 {
-    static WatsonWsServer wsMiddleman;
-    static WatsonWsClient wsClientToMainServer;
+    static WatsonWsServer wsMiddleman = null!;
+    static WatsonWsClient wsClientToMainServer = null!;
 
-    static void Main(string[] args)
+    static async Task Main(string[] args)
     {
         string middlemanIp = "100.79.34.6";  // IP of the MiddlemanServer (Desktop)
         int middlemanPort = 8181;            // Port the MiddlemanServer listens on
@@ -18,16 +19,16 @@ class Program
         wsMiddleman = new WatsonWsServer(middlemanIp, middlemanPort, false);
         wsMiddleman.ClientConnected += (sender, args) =>
         {
-            Console.WriteLine($"Client connected: {args.IpPort}");
+            Console.WriteLine("Client connected."); // Print the connection event
         };
-        wsMiddleman.MessageReceived += (sender, e) => ForwardToMainServer(e.Data);
+        wsMiddleman.MessageReceived += (sender, e) => ForwardToMainServer(e.Data.ToArray());
         wsMiddleman.Start();
 
         // Set up the connection to the MainServer
         wsClientToMainServer = new WatsonWsClient(new Uri($"ws://{mainServerIp}:{mainServerPort}"));
         wsClientToMainServer.ServerConnected += (sender, e) => Console.WriteLine("Connected to MainServer");
         wsClientToMainServer.ServerDisconnected += (sender, e) => Console.WriteLine("Disconnected from MainServer");
-        wsClientToMainServer.Start();
+        await wsClientToMainServer.StartAsync();
 
         Console.WriteLine($"Middleman WebSocket server started on {middlemanIp}:{middlemanPort}");
         Console.ReadLine();  // Keep the server running
@@ -40,7 +41,7 @@ class Program
 
         if (wsClientToMainServer != null && wsClientToMainServer.Connected)
         {
-            wsClientToMainServer.Send(data);
+            wsClientToMainServer.SendAsync(data).Wait();  // Use SendAsync and wait for the task to complete
             Console.WriteLine("Data forwarded to MainServer");
         }
         else
@@ -49,5 +50,6 @@ class Program
         }
     }
 }
+
 
 
