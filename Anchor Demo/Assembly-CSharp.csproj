@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
+    <Compile Include="Assets\QRCodeScanner.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\MRTK.Tutorials.GettingStarted\Scripts\PartAssemblyDemo.cs" />
     <Compile Include="Assets\EyeData.cs" />
@@ -53,7 +54,6 @@
     <Compile Include="Assets\MRTK.Generated\DefaultCompanyNewSubsystem\NewSubsystem.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\MRTK.Tutorials.GettingStarted\Scripts\DirectionalIndicatorController.cs" />
-    <Compile Include="Assets\SpawnAnchorFromRaySelect.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
@@ -71,12 +71,13 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\AnchorStateScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
-    <Compile Include="Assets\SpatialAnchors.cs" />
     <Compile Include="Assets\QRScripts\SpatialGraphNodeTracker.cs" />
+    <Compile Include="Assets\CubeGameManager.cs" />
     <Compile Include="Assets\MRTK.Tutorials.GettingStarted\Scripts\ExplodeViewController.cs" />
     <Compile Include="Assets\MRTK.Tutorials.AzureSpatialAnchors\Scripts\DisableDiagnosticsSystem.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
+    <Compile Include="Assets\QRScripts\QRCodesVisualizer.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\MRTK.Tutorials.GettingStarted\Scripts\PlacementHintsController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
@@ -106,6 +107,7 @@
     <Compile Include="Assets\GazeDataManager.cs" />
     <Compile Include="Assets\MRTK.Tutorials.GettingStarted\Scripts\EyeTrackingTutorialDemo.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
+    <Compile Include="Assets\QRAnchor.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Packages\Microsoft.MixedReality.QR.0.5.3037\LICENSE.txt" />
@@ -123,6 +125,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\Packages\Microsoft.Windows.MixedReality.DotNetWinRT.0.5.1049\LICENSE.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\MRTK.Tutorials.GettingStarted\Version.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
@@ -388,6 +391,9 @@
     </Reference>
     <Reference Include="ReportGeneratorMerged">
       <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\PackageCache\com.unity.testtools.codecoverage@1.2.6\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Windows.MixedReality.DotNetWinRT">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Assets\Packages\Microsoft.Windows.MixedReality.DotNetWinRT.0.5.1049\lib\unity\netstandard2.0\Microsoft.Windows.MixedReality.DotNetWinRT.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\PackageCache\com.unity.visualscripting@1.9.4\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
@@ -1077,6 +1083,10 @@
     <ProjectReference Include="Microsoft.MixedReality.QR.Editor.csproj">
       <Project>{ad08befc-39d4-2e43-46da-b80564f8d48a}</Project>
       <Name>Microsoft.MixedReality.QR.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Microsoft.Windows.MixedReality.DotNetWinRT.Editor.csproj">
+      <Project>{a63ba245-eb8c-02fc-59f8-3e695a7e0266}</Project>
+      <Name>Microsoft.Windows.MixedReality.DotNetWinRT.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

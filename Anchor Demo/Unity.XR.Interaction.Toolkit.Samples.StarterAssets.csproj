@@ -338,6 +338,9 @@
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
       <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\PackageCache\com.unity.collab-proxy@2.5.1\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Windows.MixedReality.DotNetWinRT">
+      <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Assets\Packages\Microsoft.Windows.MixedReality.DotNetWinRT.0.5.1049\lib\unity\netstandard2.0\Microsoft.Windows.MixedReality.DotNetWinRT.dll</HintPath>
+    </Reference>
     <Reference Include="log4netPlastic">
       <HintPath>C:\Users\zachr\HoloLens-Demo\HoloLense-Demo-Project\Anchor Demo\Library\PackageCache\com.unity.collab-proxy@2.5.1\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
     </Reference>

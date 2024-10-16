@@ -65,6 +65,8 @@ namespace Microsoft.MixedReality.SampleQRCodes
            // Debug.Log("Id= " + qrCode.Id + "NodeId= " + qrCode.SpatialGraphNodeId + " PhysicalSize = " + PhysicalSize + " TimeStamp = " + qrCode.SystemRelativeLastDetectedTime.Ticks + " QRVersion = " + qrCode.Version + " QRData = " + CodeText);
         }
 
+        
+        
         void UpdatePropertiesDisplay()
         {
             // Update properties that change
