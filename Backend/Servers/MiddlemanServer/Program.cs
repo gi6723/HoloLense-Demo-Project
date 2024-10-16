@@ -16,7 +16,10 @@ class Program
 
         // Start Middleman WebSocket Server
         wsMiddleman = new WatsonWsServer(middlemanIp, middlemanPort, false);
-        wsMiddleman.ClientConnected += ClientConnected;
+        wsMiddleman.ClientConnected += (sender, args) =>
+        {
+            Console.WriteLine($"Client connected: {args.IpPort}");
+        };
         wsMiddleman.MessageReceived += (sender, e) => ForwardToMainServer(e.Data);
         wsMiddleman.Start();
 
