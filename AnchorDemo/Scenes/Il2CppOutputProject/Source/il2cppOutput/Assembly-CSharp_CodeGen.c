@@ -1,0 +1,128 @@
+﻿#include "pch-c.h"
+#ifndef _MSC_VER
+# include <alloca.h>
+#else
+# include <malloc.h>
+#endif
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+extern void AnchorBehavior_Start_m8C6DD079CDF7BBD49C61D63D476C0B9E80CBA927 (void);
+extern void AnchorBehavior_Update_m2AC60269384D5145B2C85A075BA391F30EBEC238 (void);
+extern void AnchorBehavior_InitializeAnchorSubsystem_m042AEB97B0A3EDBD04DEFCD96C13B1C3B90F8418 (void);
+extern void AnchorBehavior_PlaceAnchor_mBFC6F71C23E0FC508A48659D1849FE651C14B90D (void);
+extern void AnchorBehavior__ctor_m5512BEF983E509D52A40264C6F20C4D9324E2D0D (void);
+extern void CursorPosition_Start_mBA447ECF36A6029C646422ECDAA1A346057829AA (void);
+extern void CursorPosition_Update_m59327688B3EAC52C57D6E8AAF717599B77A46E39 (void);
+extern void CursorPosition__ctor_mF06E8B624379295AED07C43FA90EA5DDDE596F90 (void);
+extern void GazeDataManager_get_headPos_m109C9D8C017BD5BF9C1BBFFCC63DB277D4133D02 (void);
+extern void GazeDataManager_set_headPos_m38F90AC1EBFC0929CA44DF5B5BE916D7C9E3ABB9 (void);
+extern void GazeDataManager_get_headDir_m30013924B77936B95A9A4D1AE70D31D4F4222E46 (void);
+extern void GazeDataManager_set_headDir_m47D32A92597EF3229F3890594C2E2E2739474AD3 (void);
+extern void GazeDataManager_Start_mCA0391A8D4708870A7BE57A97308778902030752 (void);
+extern void GazeDataManager_Update_m50E3E2CD812B169D60AD10F5961ACC0388E3905F (void);
+extern void GazeDataManager_changePosition_m4FF4A0EF032F421B4137C92A525BBC6599824623 (void);
+extern void GazeDataManager_printHeadData_m7D99A54BC52E9DD29F8458CC16DD1473D57E77A8 (void);
+extern void GazeDataManager__ctor_m85C07F816DC8BE75297D8C34204EE52198F26A37 (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
+extern void DefaultCompanyNewSubsystem_Register_m4C9B8AE843EE395B21BCD2911EB8640E5C2C092E (void);
+extern void DefaultCompanyNewSubsystem__ctor_m2CAF0FD3617A6DF3E5AFDF0EA988BE14282B9E65 (void);
+extern void DefaultCompanyNewSubsystemProvider__ctor_m363B31300EE3EC78F0B704B2AB995134F5427322 (void);
+extern void NewSubsystem__ctor_m3148FD5A6422680E61BD6801C1CAC35EFBCDEEAC (void);
+extern void NewSubsystem_Register_mEED844967F783F3DC34723E48F6CEF2999DB294D (void);
+extern void Provider__ctor_m1678DC59DCBDB01A8241EA81EB8165327CCED922 (void);
+extern void NewSubsystemCinfo_Equals_m99667B083D94BA9188A54FE16FC862BC4FC13A96 (void);
+extern void NewSubsystemCinfo__ctor_m2D83EAD59BD77DFAB13BAB070560DBA3D56DCEC6 (void);
+extern void NewSubsystemDescriptor__ctor_m4F117250177B216EDE59A3AAD8E4A5620075CC17 (void);
+extern void NewSubsystemDescriptor_Create_mB9FBE1D382250C176481C83C7C08EF2F4A37D33D (void);
+static Il2CppMethodPointer s_methodPointers[29] = 
+{
+	AnchorBehavior_Start_m8C6DD079CDF7BBD49C61D63D476C0B9E80CBA927,
+	AnchorBehavior_Update_m2AC60269384D5145B2C85A075BA391F30EBEC238,
+	AnchorBehavior_InitializeAnchorSubsystem_m042AEB97B0A3EDBD04DEFCD96C13B1C3B90F8418,
+	AnchorBehavior_PlaceAnchor_mBFC6F71C23E0FC508A48659D1849FE651C14B90D,
+	AnchorBehavior__ctor_m5512BEF983E509D52A40264C6F20C4D9324E2D0D,
+	CursorPosition_Start_mBA447ECF36A6029C646422ECDAA1A346057829AA,
+	CursorPosition_Update_m59327688B3EAC52C57D6E8AAF717599B77A46E39,
+	CursorPosition__ctor_mF06E8B624379295AED07C43FA90EA5DDDE596F90,
+	GazeDataManager_get_headPos_m109C9D8C017BD5BF9C1BBFFCC63DB277D4133D02,
+	GazeDataManager_set_headPos_m38F90AC1EBFC0929CA44DF5B5BE916D7C9E3ABB9,
+	GazeDataManager_get_headDir_m30013924B77936B95A9A4D1AE70D31D4F4222E46,
+	GazeDataManager_set_headDir_m47D32A92597EF3229F3890594C2E2E2739474AD3,
+	GazeDataManager_Start_mCA0391A8D4708870A7BE57A97308778902030752,
+	GazeDataManager_Update_m50E3E2CD812B169D60AD10F5961ACC0388E3905F,
+	GazeDataManager_changePosition_m4FF4A0EF032F421B4137C92A525BBC6599824623,
+	GazeDataManager_printHeadData_m7D99A54BC52E9DD29F8458CC16DD1473D57E77A8,
+	GazeDataManager__ctor_m85C07F816DC8BE75297D8C34204EE52198F26A37,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
+	DefaultCompanyNewSubsystem_Register_m4C9B8AE843EE395B21BCD2911EB8640E5C2C092E,
+	DefaultCompanyNewSubsystem__ctor_m2CAF0FD3617A6DF3E5AFDF0EA988BE14282B9E65,
+	DefaultCompanyNewSubsystemProvider__ctor_m363B31300EE3EC78F0B704B2AB995134F5427322,
+	NewSubsystem__ctor_m3148FD5A6422680E61BD6801C1CAC35EFBCDEEAC,
+	NewSubsystem_Register_mEED844967F783F3DC34723E48F6CEF2999DB294D,
+	Provider__ctor_m1678DC59DCBDB01A8241EA81EB8165327CCED922,
+	NewSubsystemCinfo_Equals_m99667B083D94BA9188A54FE16FC862BC4FC13A96,
+	NewSubsystemCinfo__ctor_m2D83EAD59BD77DFAB13BAB070560DBA3D56DCEC6,
+	NewSubsystemDescriptor__ctor_m4F117250177B216EDE59A3AAD8E4A5620075CC17,
+	NewSubsystemDescriptor_Create_mB9FBE1D382250C176481C83C7C08EF2F4A37D33D,
+};
+static const int32_t s_InvokerIndices[29] = 
+{
+	9416,
+	9416,
+	9241,
+	7566,
+	9416,
+	9416,
+	9416,
+	9416,
+	9405,
+	7566,
+	9405,
+	7566,
+	9416,
+	9416,
+	5462,
+	9416,
+	9416,
+	14056,
+	9416,
+	14035,
+	9416,
+	9416,
+	9416,
+	13184,
+	9416,
+	5322,
+	9416,
+	7423,
+	13469,
+};
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
+const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
+{
+	"Assembly-CSharp.dll",
+	29,
+	s_methodPointers,
+	0,
+	NULL,
+	s_InvokerIndices,
+	0,
+	NULL,
+	0,
+	NULL,
+	0,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};
