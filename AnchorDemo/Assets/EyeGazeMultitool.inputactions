@@ -1,0 +1,79 @@
+{
+    "name": "EyeGazeMultitool",
+    "maps": [
+        {
+            "name": "EyeGaze",
+            "id": "f60e220a-3cfb-481a-b500-b152d2f171f9",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Value",
+                    "id": "3af6b6d8-50b9-4374-889b-772e5c23d98a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "63f6d149-1689-4b6d-aa67-b5037439c19d",
+                    "path": "<EyeGaze>/pose/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "45931f10-d9f5-4466-b51e-49ea2fdcf9bf",
+                    "path": "<EyeGaze>/pose/rotation",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d2548d8e-7d7a-4076-aaa6-c02a85583de6",
+                    "path": "<OpenXRDevice>/{RightEyePosition}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "19999f62-fa98-4f04-9149-e519c7c8cc28",
+                    "path": "*/{RightEyeRotation}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "New Control Scheme",
+            "bindingGroup": "New Control Scheme",
+            "devices": [
+                {
+                    "devicePath": "<EyeGaze>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
