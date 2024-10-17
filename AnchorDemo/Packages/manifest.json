@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.github-glitchenzo.nugetforunity": "https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity",
+    "com.endel.nativewebsocket": "https://github.com/endel/NativeWebSocket.git#upm",
     "com.microsoft.azure.object-anchors.runtime": "file:MixedReality/com.microsoft.azure.object-anchors.runtime-0.25.0.tgz",
     "com.microsoft.azure.remote-rendering": "file:MixedReality/com.microsoft.azure.remote-rendering-1.2.32.tgz",
     "com.microsoft.azure.spatial-anchors-sdk.core": "file:MixedReality/com.microsoft.azure.spatial-anchors-sdk.core-2.14.1.tgz",

@@ -1,11 +1,11 @@
 {
   "dependencies": {
-    "com.github-glitchenzo.nugetforunity": {
-      "version": "https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity",
+    "com.endel.nativewebsocket": {
+      "version": "https://github.com/endel/NativeWebSocket.git#upm",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "a011c51ed65c9abc3151a7a408bc70d408352933"
+      "hash": "c5101c07762251edc82caad9e8a39d51b1229c31"
     },
     "com.microsoft.azure.object-anchors.runtime": {
       "version": "file:MixedReality/com.microsoft.azure.object-anchors.runtime-0.25.0.tgz",
