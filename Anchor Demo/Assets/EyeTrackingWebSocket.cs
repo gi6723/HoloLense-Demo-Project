@@ -1,18 +1,18 @@
 using UnityEngine;
 using System.Text;
-using NativeWebSocket; // Ensure you are using NativeWebSocket
+using NativeWebSocket;
 
 public class EyeTrackingWebSocket : MonoBehaviour
 {
-    private NativeWebSocket.WebSocket _wsClient; // Specify NativeWebSocket.WebSocket
-    private string _middlemanIp = "100.79.34.6";  // Your Middleman server IP
-    private int _middlemanPort = 8181; // Port to connect to
+    private NativeWebSocket.WebSocket _wsClient;
+    private string _middlemanIp = "100.79.34.6";  // Middleman server IP
+    private int _middlemanPort = 8181;            // Port to connect to
 
     async void Start()
     {
         // Initialize WebSocket connection to Middleman
         string uri = $"ws://{_middlemanIp}:{_middlemanPort}"; 
-        _wsClient = new NativeWebSocket.WebSocket(uri); // Specify NativeWebSocket.WebSocket
+        _wsClient = new NativeWebSocket.WebSocket(uri);
 
         // Subscribe to WebSocket events
         _wsClient.OnOpen += OnOpen;
@@ -32,6 +32,7 @@ public class EyeTrackingWebSocket : MonoBehaviour
 
     private void OnMessage(byte[] data)
     {
+        // Log the incoming data from the Middleman
         string message = Encoding.UTF8.GetString(data);
         Debug.Log($"Message received from Middleman: {message}");
     }
@@ -48,11 +49,13 @@ public class EyeTrackingWebSocket : MonoBehaviour
 
     public async void SendEyeTrackingData(string jsonData)
     {
-        if (_wsClient.State == NativeWebSocket.WebSocketState.Open) // Specify NativeWebSocket.WebSocketState
+        Debug.Log($"Attempting to send data to Middleman: {jsonData}");  // Log before sending
+    
+        if (_wsClient.State == NativeWebSocket.WebSocketState.Open)
         {
             byte[] data = Encoding.UTF8.GetBytes(jsonData);
             await _wsClient.Send(data);
-            Debug.Log("Eye-tracking data sent to Middleman");
+            Debug.Log("Data sent successfully.");
         }
         else
         {
@@ -65,19 +68,21 @@ public class EyeTrackingWebSocket : MonoBehaviour
         // Properly close the connection when exiting
         if (_wsClient != null)
         {
-            await _wsClient.Close(); // Close the connection
+            await _wsClient.Close();
+            Debug.Log("WebSocket connection closed.");
         }
     }
 
-    private void Update() // Change this to void instead of async void
+    private void Update()
     {
         // Update the WebSocket to process incoming messages
         if (_wsClient != null)
         {
-            _wsClient.DispatchMessageQueue(); // Call DispatchMessageQueue without await
+            _wsClient.DispatchMessageQueue();
         }
     }
 }
+
 
 
 

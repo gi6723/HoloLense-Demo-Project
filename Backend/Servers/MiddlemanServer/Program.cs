@@ -14,24 +14,30 @@ class Program
     {
         try
         {
-            string middlemanIp = "100.79.34.6";  // IP of the MiddlemanServer (Desktop)
-            int middlemanPort = 8181;            // Port the MiddlemanServer listens on
+            string middlemanIp = "100.79.34.6"; // Middleman server IP
+            int middlemanPort = 8181;            // Port the Middleman listens on
 
-            string mainServerIp = "100.121.5.87";  // IP of the MainServer (VM)
+            string mainServerIp = "100.121.5.87";  // Main server IP
             int mainServerPort = 8181;             // Port to forward data to
 
             // Open the CSV file to write incoming data
             csvWriter = new StreamWriter("eye_tracking_data.csv", append: true);
-            csvWriter.WriteLine("Timestamp,Angular Velocity X,Angular Velocity Y,Angular Velocity Z,Position X,Position Y,Position Z,Right Eye Position X,Right Eye Position Y,Right Eye Position Z,Left Eye Position X,Left Eye Position Y,Left Eye Position Z,Center Eye Position X,Center Eye Position Y,Center Eye Position Z,Center Eye Rotation X,Center Eye Rotation Y,Center Eye Rotation Z,Center Eye Rotation W");  // CSV header
+            csvWriter.WriteLine(EyeData.CsvHeader());  // Write CSV header
 
             // Start Middleman WebSocket Server
             wsMiddleman = new WatsonWsServer(middlemanIp, middlemanPort, false);
             wsMiddleman.ClientConnected += (sender, args) =>
             {
-                Console.WriteLine("Client connected."); // Print the connection event
+                Console.WriteLine($"Client connected: {args.Client.IpPort}");  // Log when a client connects
             };
-            wsMiddleman.MessageReceived += (sender, e) => ProcessIncomingData(e.Data.ToArray());
-            wsMiddleman.Start();
+
+            wsMiddleman.MessageReceived += (sender, e) =>
+            {
+                string message = Encoding.UTF8.GetString(e.Data.ToArray());
+                Console.WriteLine($"Message received: {message}");  // Log received data
+                ProcessIncomingData(e.Data.ToArray());  // Process the received data
+            };
+
 
             // Set up the connection to the MainServer
             wsClientToMainServer = new WatsonWsClient(new Uri($"ws://{mainServerIp}:{mainServerPort}"));
@@ -60,8 +66,9 @@ class Program
     // Process the incoming data
     static void ProcessIncomingData(byte[] data)
     {
+        
         string jsonData = Encoding.UTF8.GetString(data);
-        Console.WriteLine($"Received from client: {jsonData}");
+        Console.WriteLine($"Received from client: {jsonData}");  // Log received data
 
         // Forward the data to the MainServer
         ForwardToMainServer(data);
@@ -73,14 +80,24 @@ class Program
     // Write the incoming JSON data to CSV
     static void WriteToCsv(string jsonData)
     {
-        // Assuming the data follows the format of your EyeData class in JSON
-        // Deserialize the JSON into an object
-        var eyeData = Newtonsoft.Json.JsonConvert.DeserializeObject<EyeData>(jsonData);
+        try
+        {
+            // Deserialize the JSON into an object
+            var eyeData = Newtonsoft.Json.JsonConvert.DeserializeObject<EyeData>(jsonData);
 
-        // Write data as CSV row
-        string csvRow = eyeData.ToCsv();
-        csvWriter.WriteLine(csvRow);
-        csvWriter.Flush();
+            if (eyeData != null)
+            {
+                // Write data as CSV row
+                string csvRow = eyeData.ToCsv();
+                csvWriter.WriteLine(csvRow);
+                csvWriter.Flush();
+                Console.WriteLine("Data written to CSV");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error writing to CSV: {ex.Message}");
+        }
     }
 
     // Forward data to the MainServer
@@ -88,7 +105,7 @@ class Program
     {
         if (wsClientToMainServer != null && wsClientToMainServer.Connected)
         {
-            wsClientToMainServer.SendAsync(data).Wait();  // Use SendAsync and wait for the task to complete
+            wsClientToMainServer.SendAsync(data).Wait();  // Forward data and wait for completion
             Console.WriteLine("Data forwarded to MainServer");
         }
         else
@@ -97,18 +114,4 @@ class Program
         }
     }
 }
-
-public class EyeData
-{
-    public float TimeStamp { get; set; }
-    public Vector3 AngularVelocity { get; set; }
-    public Vector3 Position { get; set; }
-    public Vector3 RightEyePosition { get; set; }
-    public Vector3 LeftEyePosition { get; set; }
-    public Vector3 CenterEyePosition { get; set; }
-    public Quaternion CenterEyeRotation { get; set; }
-}
-
-
-
 
