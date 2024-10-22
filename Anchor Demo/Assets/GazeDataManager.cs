@@ -11,6 +11,8 @@ public class GazeDataManager : MonoBehaviour
     private Dictionary<string, InputAction> _eyeVectorActions;
     private Dictionary<string, InputAction> _eyeRotationActions;
 
+    private EyeData _prevTime;
+
     private Vector3 _headPos;
     private Vector3 _headDir;
 
@@ -22,6 +24,8 @@ public class GazeDataManager : MonoBehaviour
         _headPos = _cam.transform.position; // Initialize head position
         _headDir = _cam.transform.forward;  // Initialize head direction
 
+        
+        
         _eyeActionMap = eyeActionAsset.FindActionMap("EyeActions", true);
         _eyeActionMap.Enable();
 
@@ -36,7 +40,6 @@ public class GazeDataManager : MonoBehaviour
 
         _eyeRotationActions = new Dictionary<string, InputAction>()
         {
-            {"angularVelocity",_eyeActionMap.FindAction("CenterEyeAngularVel")},
             { "centerEyeRotation",_eyeActionMap.FindAction("CenterEyeRotation") },
             { "leftEyeRotation",_eyeActionMap.FindAction("LeftEyeRotation") },
             { "rightEyeRotation",_eyeActionMap.FindAction("RightEyeRotation") },
@@ -51,7 +54,7 @@ public class GazeDataManager : MonoBehaviour
             PrintHeadData(); // Print head data for debugging
         }
 
-        var currentData = new EyeData(Time.time, _eyeVectorActions, _eyeRotationActions);
+        var currentData = new EyeData(Time.time, _eyeVectorActions, _eyeRotationActions, _prevTime);
 
         // Convert eye data to JSON and send through WebSocket
         if (_webSocketClient != null)

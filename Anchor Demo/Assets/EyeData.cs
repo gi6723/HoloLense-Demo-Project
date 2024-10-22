@@ -19,10 +19,28 @@ public class EyeData
     private float time { get; set; }
 
 
-    public EyeData(float time, Dictionary<string, InputAction> vectorData, Dictionary<string, InputAction> quaternionData)
+    
+    
+    //copy constructor
+    public EyeData(Vector3 angularVelocity, Vector3 position, Vector3 velocity, Vector3 rightEyePosition, Vector3 leftEyePosition, Vector3 centerEyePosition, Quaternion centerEyeRotation, Quaternion leftEyeRotation, Quaternion rightEyeRotation, float time)
+    {
+        this.angularVelocity = angularVelocity;
+        this.position = position;
+        this.velocity = velocity;
+        this.rightEyePosition = rightEyePosition;
+        this.leftEyePosition = leftEyePosition;
+        this.centerEyePosition = centerEyePosition;
+        this.centerEyeRotation = centerEyeRotation;
+        this.leftEyeRotation = leftEyeRotation;
+        this.rightEyeRotation = rightEyeRotation;
+        this.time = time;
+    }
+
+    
+    //reading values from Input actions to retrieve data frame by frame. Previous frames data is passed to be used in angular velocty calculation, may have more uses down the line.
+    public EyeData(float time, Dictionary<string, InputAction> vectorData, Dictionary<string, InputAction> quaternionData, EyeData prevTime)
     {
         this.time = time;
-        this.angularVelocity = quaternionData["angularVelocity"].ReadValue<Vector3>();
         this.position = vectorData["position"].ReadValue<Vector3>();
         this.velocity = vectorData["velocity"].ReadValue<Vector3>();
         this.rightEyePosition = vectorData["rightEyePosition"].ReadValue<Vector3>();
@@ -31,6 +49,26 @@ public class EyeData
         this.centerEyeRotation = quaternionData["centerEyeRotation"].ReadValue<Quaternion>();
         this.leftEyeRotation = quaternionData["leftEyeRotation"].ReadValue<Quaternion>();
         this.rightEyeRotation = quaternionData["rightEyeRotation"].ReadValue<Quaternion>();
+        this.angularVelocity = CalculateAngularVelocity(prevTime.centerEyeRotation, this.centerEyeRotation, time - prevTime.time);
+    }
+    
+    //Quaternion math to calculate angular velocity as represented by a rotation scalar w denoted by angularVelocityMagnitude multiplied by the axis of rotation represented by 3d normalized vector stemming from the relative origin of the object itself.
+    //Note that this angular velocity is NOT normalized because it is a normalized vector * a scalar of the rotation. 
+    Vector3 CalculateAngularVelocity(Quaternion q1, Quaternion q2, float deltaTime)
+    {
+        // Step 1: Find the relative rotation
+        Quaternion relativeRotation = q2 * Quaternion.Inverse(q1);
+    
+        // Step 2: Extract the angle (in radians)
+        float angleInRadians;
+        Vector3 axis;
+        relativeRotation.ToAngleAxis(out angleInRadians, out axis);
+    
+        // Step 3: Compute angular velocity (rate of rotation)
+        float angularVelocityMagnitude = angleInRadians / deltaTime;
+    
+        // Step 4: Return the angular velocity vector
+        return axis * angularVelocityMagnitude;
     }
     
     public override string ToString()
