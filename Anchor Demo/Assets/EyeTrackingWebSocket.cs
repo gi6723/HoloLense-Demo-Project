@@ -1,17 +1,22 @@
+using System;
 using UnityEngine;
 using System.Text;
 using NativeWebSocket;
+using Newtonsoft.Json;
 
 public class EyeTrackingWebSocket : MonoBehaviour
 {
     private NativeWebSocket.WebSocket _wsClient;
     private string _middlemanIp = "100.79.34.6";  // Middleman server IP
-    private int _middlemanPort = 8181;            // Port to connect to
+    private int _middlemanPort = 8282;            // Port to connect to
 
     async void Start()
     {
+        //Debug.Log("EyeTrackingWebSocket Start() called.");
+
         // Initialize WebSocket connection to Middleman
-        string uri = $"ws://{_middlemanIp}:{_middlemanPort}"; 
+        string uri = $"ws://{_middlemanIp}:{_middlemanPort}";
+        //Debug.Log($"Attempting to connect to WebSocket server at {uri}");
         _wsClient = new NativeWebSocket.WebSocket(uri);
 
         // Subscribe to WebSocket events
@@ -20,9 +25,18 @@ public class EyeTrackingWebSocket : MonoBehaviour
         _wsClient.OnError += OnError;
         _wsClient.OnClose += OnClose;
 
-        // Connect to the server
-        await _wsClient.Connect();
-        Debug.Log("Connecting to Middleman Server...");
+        try
+        {
+            // Connect to the server
+            await _wsClient.Connect();
+            //Debug.Log("WebSocket Connect() called.");
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError($"WebSocket connection failed: {ex.Message}");
+        }
+
+        Debug.Log("EyeTrackingWebSocket Start() completed.");
     }
 
     private void OnOpen()
@@ -34,7 +48,7 @@ public class EyeTrackingWebSocket : MonoBehaviour
     {
         // Log the incoming data from the Middleman
         string message = Encoding.UTF8.GetString(data);
-        Debug.Log($"Message received from Middleman: {message}");
+        //Debug.Log($"Message received from Middleman: {message}");
     }
 
     private void OnError(string errorMsg)
@@ -49,13 +63,30 @@ public class EyeTrackingWebSocket : MonoBehaviour
 
     public async void SendEyeTrackingData(string jsonData)
     {
-        Debug.Log($"Attempting to send data to Middleman: {jsonData}");  // Log before sending
-    
+        // Log before sending
+        Debug.Log($"Attempting to send data to Middleman: {jsonData}");
+
         if (_wsClient.State == NativeWebSocket.WebSocketState.Open)
         {
-            byte[] data = Encoding.UTF8.GetBytes(jsonData);
-            await _wsClient.Send(data);
-            Debug.Log("Data sent successfully.");
+            try
+            {
+                // Wrap the eye tracking data with the message type
+                var message = new
+                {
+                    type = "EyeData",
+                    data = jsonData
+                };
+                // Serialize the wrapped message to JSON
+                string wrappedMessage = JsonConvert.SerializeObject(message);
+                byte[] data = Encoding.UTF8.GetBytes(wrappedMessage);
+                // Send the serialized message
+                await _wsClient.Send(data);
+                //Debug.Log("Eye-tracking data sent successfully.");
+            }
+            catch (System.Exception ex)
+            {
+                Debug.LogError($"Failed to send data: {ex.Message}");
+            }
         }
         else
         {
@@ -63,6 +94,41 @@ public class EyeTrackingWebSocket : MonoBehaviour
         }
     }
 
+    public async void SendGameEvent(string eventType, string timestamp, string details)
+    {
+        //Debug.Log($"Attempting to send game event to Middleman: {eventType}, {timestamp}, {details}");  // Log before sending
+
+        if (_wsClient.State == WebSocketState.Open)
+        {
+            try
+            {
+                var eventMessage = new
+                {
+                    type = "GameEventData",
+                    data = new
+                    {
+                        EventType = eventType,
+                        Timestamp = timestamp,
+                        Details = details
+                    }
+                };
+
+                string jsonData = JsonConvert.SerializeObject(eventMessage);
+                byte[] data = Encoding.UTF8.GetBytes(jsonData);
+                await _wsClient.Send(data);
+                Debug.Log("Game event data sent successfully.");
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"Failed to send game event data: {ex.Message}");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("WebSocket is not connected. Cannot send game event data.");
+        }
+    }
+    
     private async void OnApplicationQuit()
     {
         // Properly close the connection when exiting
@@ -82,6 +148,7 @@ public class EyeTrackingWebSocket : MonoBehaviour
         }
     }
 }
+
 
 
 

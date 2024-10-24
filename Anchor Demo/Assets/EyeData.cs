@@ -2,9 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Newtonsoft.Json;
 
-
-//TODO: Clean up velocity code. Decide if we want to include it!
+[System.Serializable]
+public class SerializableEyeData
+{
+    public float TimeStamp;
+    public float[] AngularVelocity;
+    public float[] Position;
+    public float[] RightEyePosition;
+    public float[] LeftEyePosition;
+    public float[] CenterEyePosition;
+    public float[] CenterEyeRotation;
+    public float[] LeftEyeRotation;
+    public float[] RightEyeRotation;
+}
+// TODO: Clean up velocity code. Decide if we want to include it!
 public class EyeData
 {
     private Vector3 angularVelocity { get; set; }
@@ -18,26 +31,7 @@ public class EyeData
     private Quaternion rightEyeRotation { get; set; }
     private float time { get; set; }
 
-
-    
-    
-    //copy constructor
-    public EyeData(Vector3 angularVelocity, Vector3 position, Vector3 velocity, Vector3 rightEyePosition, Vector3 leftEyePosition, Vector3 centerEyePosition, Quaternion centerEyeRotation, Quaternion leftEyeRotation, Quaternion rightEyeRotation, float time)
-    {
-        this.angularVelocity = angularVelocity;
-        this.position = position;
-        this.velocity = velocity;
-        this.rightEyePosition = rightEyePosition;
-        this.leftEyePosition = leftEyePosition;
-        this.centerEyePosition = centerEyePosition;
-        this.centerEyeRotation = centerEyeRotation;
-        this.leftEyeRotation = leftEyeRotation;
-        this.rightEyeRotation = rightEyeRotation;
-        this.time = time;
-    }
-
-    
-    //reading values from Input actions to retrieve data frame by frame. Previous frames data is passed to be used in angular velocty calculation, may have more uses down the line.
+    // Single constructor with null check
     public EyeData(float time, Dictionary<string, InputAction> vectorData, Dictionary<string, InputAction> quaternionData, EyeData prevTime)
     {
         this.time = time;
@@ -49,31 +43,31 @@ public class EyeData
         this.centerEyeRotation = quaternionData["centerEyeRotation"].ReadValue<Quaternion>();
         this.leftEyeRotation = quaternionData["leftEyeRotation"].ReadValue<Quaternion>();
         this.rightEyeRotation = quaternionData["rightEyeRotation"].ReadValue<Quaternion>();
-        this.angularVelocity = CalculateAngularVelocity(prevTime.centerEyeRotation, this.centerEyeRotation, time - prevTime.time);
+
+        // Check if prevTime is null before calculating angular velocity
+        if (prevTime != null)
+        {
+            this.angularVelocity = CalculateAngularVelocity(prevTime.centerEyeRotation, this.centerEyeRotation, time - prevTime.time);
+        }
+        else
+        {
+            // Initialize angularVelocity to zero if there's no previous frame
+            this.angularVelocity = Vector3.zero;
+        }
     }
-    
-    //Quaternion math to calculate angular velocity as represented by a rotation scalar w denoted by angularVelocityMagnitude multiplied by the axis of rotation represented by 3d normalized vector stemming from the relative origin of the object itself.
-    //Note that this angular velocity is NOT normalized because it is a normalized vector * a scalar of the rotation. 
+
+    // Quaternion math to calculate angular velocity
     Vector3 CalculateAngularVelocity(Quaternion q1, Quaternion q2, float deltaTime)
     {
-        // Step 1: Find the relative rotation
         Quaternion relativeRotation = q2 * Quaternion.Inverse(q1);
-    
-        // Step 2: Extract the angle (in radians)
-        float angleInRadians;
-        Vector3 axis;
-        relativeRotation.ToAngleAxis(out angleInRadians, out axis);
-    
-        // Step 3: Compute angular velocity (rate of rotation)
+        relativeRotation.ToAngleAxis(out float angleInRadians, out Vector3 axis);
         float angularVelocityMagnitude = angleInRadians / deltaTime;
-    
-        // Step 4: Return the angular velocity vector
         return axis * angularVelocityMagnitude;
     }
-    
+
     public override string ToString()
     {
-        return $"Time: {time}Angular Velocity: {angularVelocity}\nPosition: {position}\nRight Eye Position: {rightEyePosition}\nLeft Eye Position: {leftEyePosition}\nCenter Eye Position: {centerEyePosition}\nCenter Eye Rotation: {centerEyeRotation}\nLeft Eye Rotation: {leftEyeRotation}\nRight Eye Rotation: {rightEyeRotation}";
+        return $"Time: {time} Angular Velocity: {angularVelocity}\nPosition: {position}\nRight Eye Position: {rightEyePosition}\nLeft Eye Position: {leftEyePosition}\nCenter Eye Position: {centerEyePosition}\nCenter Eye Rotation: {centerEyeRotation}\nLeft Eye Rotation: {leftEyeRotation}\nRight Eye Rotation: {rightEyeRotation}";
     }
 
     public string ToCsv()
@@ -88,8 +82,19 @@ public class EyeData
 
     public string ToJson()
     {
-        return $"{{\"TimeStamp\": {time},\"Angular Velocity\": {angularVelocity},\"Position\": {position},\"Right Eye Position\": {rightEyePosition},\"Left Eye Position\": {leftEyePosition},\"Center Eye Position\": {centerEyePosition},\"Center Eye Rotation\": {centerEyeRotation},\"Left Eye Rotation\": {leftEyeRotation},\"Right Eye Rotation\": {rightEyeRotation}}}";
-    }
+        SerializableEyeData serializableData = new SerializableEyeData
+        {
+            TimeStamp = this.time,
+            AngularVelocity = new float[] { this.angularVelocity.x, this.angularVelocity.y, this.angularVelocity.z },
+            Position = new float[] { this.position.x, this.position.y, this.position.z },
+            RightEyePosition = new float[] { this.rightEyePosition.x, this.rightEyePosition.y, this.rightEyePosition.z },
+            LeftEyePosition = new float[] { this.leftEyePosition.x, this.leftEyePosition.y, this.leftEyePosition.z },
+            CenterEyePosition = new float[] { this.centerEyePosition.x, this.centerEyePosition.y, this.centerEyePosition.z },
+            CenterEyeRotation = new float[] { this.centerEyeRotation.x, this.centerEyeRotation.y, this.centerEyeRotation.z, this.centerEyeRotation.w },
+            LeftEyeRotation = new float[] { this.leftEyeRotation.x, this.leftEyeRotation.y, this.leftEyeRotation.z, this.leftEyeRotation.w },
+            RightEyeRotation = new float[] { this.rightEyeRotation.x, this.rightEyeRotation.y, this.rightEyeRotation.z, this.rightEyeRotation.w }
+        };
 
-    
+        return JsonConvert.SerializeObject(serializableData);  // Serialize into JSON format
+    }
 }

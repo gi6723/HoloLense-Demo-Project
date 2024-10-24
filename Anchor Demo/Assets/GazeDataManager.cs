@@ -24,8 +24,6 @@ public class GazeDataManager : MonoBehaviour
         _headPos = _cam.transform.position; // Initialize head position
         _headDir = _cam.transform.forward;  // Initialize head direction
 
-        
-        
         _eyeActionMap = eyeActionAsset.FindActionMap("EyeActions", true);
         _eyeActionMap.Enable();
 
@@ -44,6 +42,14 @@ public class GazeDataManager : MonoBehaviour
             { "leftEyeRotation",_eyeActionMap.FindAction("LeftEyeRotation") },
             { "rightEyeRotation",_eyeActionMap.FindAction("RightEyeRotation") },
         };
+
+        // Initialize _prevTime with default values to avoid NullReferenceException
+        _prevTime = new EyeData(
+            time: Time.time,
+            vectorData: _eyeVectorActions,
+            quaternionData: _eyeRotationActions,
+            prevTime: null // Since this is the first frame, prevTime can be null
+        );
     }
 
     void Update()
@@ -54,7 +60,16 @@ public class GazeDataManager : MonoBehaviour
             PrintHeadData(); // Print head data for debugging
         }
 
-        var currentData = new EyeData(Time.time, _eyeVectorActions, _eyeRotationActions, _prevTime);
+        EyeData currentData;
+        if (_prevTime != null)
+        {
+            currentData = new EyeData(Time.time, _eyeVectorActions, _eyeRotationActions, _prevTime);
+        }
+        else
+        {
+            // Handle the first frame where _prevTime is not yet set
+            currentData = new EyeData(Time.time, _eyeVectorActions, _eyeRotationActions, null);
+        }
 
         // Convert eye data to JSON and send through WebSocket
         if (_webSocketClient != null)
@@ -63,7 +78,10 @@ public class GazeDataManager : MonoBehaviour
             _webSocketClient.SendEyeTrackingData(jsonData);  // Send data to middleman server
         }
         
-        Debug.Log(currentData.ToJson());
+        //Debug.Log(currentData.ToJson());
+
+        // Update _prevTime for the next frame
+        _prevTime = currentData;
     }
 
     private bool ChangePosition(Vector3 contender)
@@ -82,6 +100,7 @@ public class GazeDataManager : MonoBehaviour
         Debug.Log($"Head pos: {_headPos}\tHead dir: {_headDir}\n");
     }
 }
+
 
 
 

@@ -11,8 +11,10 @@ namespace DefaultNamespace
     {
         static WatsonWsServer wsMiddleman = null!;
         static WatsonWsClient wsClientToMainServer = null!;
-        static StreamWriter csvWriter = null!;
-        static string csvFilePath = "eye_tracking_data.csv";
+        static StreamWriter eyeCsvWriter = null!;
+        static StreamWriter eventCsvWriter = null!;
+        static string eyeCsvFilePath = "eye_tracking_data.csv";
+        static string eventCsvFilePath = "game_events.csv";
 
         static async Task Main(string[] args)
         {
@@ -25,9 +27,12 @@ namespace DefaultNamespace
                 string mainServerIp = "100.121.5.87";  // Main server IP
                 int mainServerPort = 8181;             // Port to forward data to
 
-                // Initialize CSV file: clear and write header
-                InitializeCsv(csvFilePath);
-                csvWriter = new StreamWriter(csvFilePath, append: true);
+                // Initialize CSV files: clear and write headers
+                InitializeEyeCsv(eyeCsvFilePath);
+                eyeCsvWriter = new StreamWriter(eyeCsvFilePath, append: true);
+
+                InitializeEventCsv(eventCsvFilePath);
+                eventCsvWriter = new StreamWriter(eventCsvFilePath, append: true);
 
                 // Start Middleman WebSocket Server
                 wsMiddleman = new WatsonWsServer(middlemanIp, middlemanPort, false);
@@ -43,8 +48,8 @@ namespace DefaultNamespace
                 wsMiddleman.MessageReceived += (sender, e) =>
                 {
                     string message = Encoding.UTF8.GetString(e.Data.ToArray());
-                    Console.WriteLine($"Message received: {message}");
-                    ProcessIncomingData(e.Data.ToArray());
+                    //Console.WriteLine($"Message received: {message}");
+                    ProcessIncomingData(message);
                 };
 
                 // Set up the connection to the MainServer
@@ -62,15 +67,13 @@ namespace DefaultNamespace
             }
             finally
             {
-                // Close the CSV writer when the program exits
-                if (csvWriter != null)
-                {
-                    csvWriter.Close();
-                }
+                // Close the CSV writers when the program exits
+                eyeCsvWriter?.Close();
+                eventCsvWriter?.Close();
             }
         }
 
-        static void InitializeCsv(string csvFilePath)
+        static void InitializeEyeCsv(string csvFilePath)
         {
             using (StreamWriter writer = new StreamWriter(csvFilePath, false))
             {
@@ -78,43 +81,85 @@ namespace DefaultNamespace
             }
         }
 
-        // Process the incoming data
-        static void ProcessIncomingData(byte[] data)
+        static void InitializeEventCsv(string csvFilePath)
         {
-            string jsonData = Encoding.UTF8.GetString(data);
-            Console.WriteLine($"Received from client: {jsonData}");
-
-            // Forward the data to the MainServer
-            ForwardToMainServer(data);
-
-            // Convert the JSON data to CSV format and write it
-            WriteToCsv(jsonData);
+            using (StreamWriter writer = new StreamWriter(csvFilePath, false))
+            {
+                writer.WriteLine("EventType,Timestamp,Details");  // Write the header
+            }
         }
 
-        // Write the incoming JSON data to CSV
-        static void WriteToCsv(string jsonData)
+        // Process the incoming data
+        static void ProcessIncomingData(string jsonData)
         {
             try
             {
-                var eyeData = JsonConvert.DeserializeObject<EyeData>(jsonData);
-
-                if (eyeData != null)
+                var baseMessage = JsonConvert.DeserializeObject<BaseMessage>(jsonData);
+                if (baseMessage == null || string.IsNullOrEmpty(baseMessage.type))
                 {
-                    string csvRow = eyeData.ToCsv();
-                    csvWriter.WriteLine(csvRow);
-                    csvWriter.Flush();
-                    Console.WriteLine("Data written to CSV");
+                    Console.WriteLine("Invalid message format: missing type.");
+                    return;
                 }
-                else
+
+                if (baseMessage.data == null)
                 {
-                    Console.WriteLine("Deserialized eyeData is null.");
+                    Console.WriteLine("Invalid message format: missing data.");
+                    return;
+                }
+
+                string dataAsString = baseMessage.data?.ToString() ?? string.Empty;
+                if (string.IsNullOrEmpty(dataAsString))
+                {
+                    Console.WriteLine("Data is null or empty.");
+                    return;
+                }
+
+                switch (baseMessage.type)
+                {
+                    case "EyeData":
+                        var eyeData = JsonConvert.DeserializeObject<EyeData>(dataAsString);
+                        if (eyeData != null && !float.IsNaN(eyeData.AngularVelocity[0]))
+                        {
+                            string eyeCsvRow = eyeData.ToCsv();
+                            eyeCsvWriter.WriteLine(eyeCsvRow);
+                            eyeCsvWriter.Flush();
+                            Console.WriteLine("Eye-tracking data written to CSV.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Invalid or incomplete eye-tracking data.");
+                        }
+                        break;
+
+                    case "GameEventData":
+                        var eventData = JsonConvert.DeserializeObject<GameEventData>(dataAsString);
+                        if (eventData != null)
+                        {
+                            string eventCsvRow = $"{eventData.EventType},{eventData.Timestamp},{eventData.Details}";
+                            eventCsvWriter.WriteLine(eventCsvRow);
+                            eventCsvWriter.Flush();
+                            Console.WriteLine("Game event data written to CSV.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Failed to deserialize game event data.");
+                        }
+                        break;
+
+                    default:
+                        Console.WriteLine($"Unknown message type: {baseMessage.type}");
+                        break;
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error writing to CSV: {ex.Message}");
+                Console.WriteLine($"Error processing incoming data: {ex.Message}");
             }
         }
+
+
+
+
 
         // Forward data to the MainServer
         static void ForwardToMainServer(byte[] data)
@@ -122,7 +167,7 @@ namespace DefaultNamespace
             if (wsClientToMainServer != null && wsClientToMainServer.Connected)
             {
                 wsClientToMainServer.SendAsync(data).Wait();
-                Console.WriteLine("Data forwarded to MainServer");
+                //Console.WriteLine("Data forwarded to MainServer");
             }
             else
             {
@@ -130,5 +175,11 @@ namespace DefaultNamespace
             }
         }
     }
-}
 
+    // Base message structure to determine the message type
+    public class BaseMessage
+    {
+        public string? type { get; set; }
+        public object? data { get; set; }
+    } 
+}
